@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiking in Indiana</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {box-sizing:border-box}
+
+        .slideshow-container {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5px;
+        }
+
+        .mySlides {
+            display: none;
+
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+
+        .pic {
+            height: 50px;
+            width: 100%;
+            position: relative;
+            bottom: 52px;
+            background: #12660A;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            text-align: center;
+
+        }
+
+        .pic a {
+            text-decoration: none;
+            font-size: 180%;
+            font-weight: bolder;
+            font-family: "Agency FB";
+            transform: scale(2,1);
+            display: inline-block;
+            color: #FFFDD0;
+            position: relative;
+            bottom: -5px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            background: #12660A;
+            padding: 5px;
+            border-radius: 15px;
+            color: #FFFDD0;
+            font-family: "Agency FB";
+            font-size: 120%;
+        }
+
+        @media all and (max-width: 999px) {
+            .pic a {
+                font-size: 100%;
+                bottom: -15px;
+            }
+
+            footer {
+                position: relative;
+                top: -60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header><h1>Hiking Trails in Indiana</h1></header>
+
+<nav class="bar">
+    <div class="menu">
+        <button>Menu</button>
+        <div class="menu-content">
+            <a href="index.html">Home</a>
+            <a href="cowles.html">Cowles Bog</a>
+            <a href="falls.html">Clifty Falls</a>
+            <a href="hemlock.html">Hemlock Cliffs</a>
+            <a href="lawrence.html">Lawrence Creek</a>
+        </div>
+    </div>
+</nav>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+        <a href="cowles.html">
+            <img src="cowles1.jpg"></a>
+            <div class="pic">
+                <a href="cowles.html">Cowles Bog Trail</a>
+            </div>
+    </div>
+
+    <div class="mySlides fade">
+        <a href="falls.html">
+            <img src="clifty1.jpg"></a>
+            <div class="pic">
+                <a href="falls.html">Clifty Falls, Hoffman Falls, Tunnel Falls</a>
+            </div>
+    </div>
+
+    <div class="mySlides fade">
+        <a href="hemlock.html">
+            <img src="hemlock1.jpg"></a>
+            <div class="pic">
+                <a href="hemlock.html">Hemlock Cliffs National Scenic Trail</a>
+            </div>
+    </div>
+
+    <div class="mySlides fade">
+        <a href="lawrence.html">
+            <img src="lawrence1.jpg"></a>
+            <div class="pic">
+                <a href="lawrence.html">Lawrence Creek Trail</a>
+            </div>
+    </div>
+
+</div>
+<br>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 2500);
+
+    }
+</script>
+
+<div class="info">
+<h2>Trails</h2>
+    <p><br>Indiana may not be anywhere near the top of best states to hike, but that does not mean there is not plenty
+    of excellent, diverse trails on offer. Whether you are looking to hike on foot, bike, or are looking for
+    trails ranging in difficulty, there is something for everyone in Indiana.</p>
+    <br>
+</div>
+
+<footer>Copyright &#169; 2022 Dale Whitehead</footer>
+
+</body>
+</html>
